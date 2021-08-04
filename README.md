@@ -1,5 +1,5 @@
 # AskMatePHP
-<h1>AskMate in PHP</h>
+<h1>AskMate in PHP</h1>
 <br>Original project : https://github.com/csabika98/AskMate
 
 Funtions:
