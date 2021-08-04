@@ -1,0 +1,61 @@
+<?php
+include_once 'Classes/Db.php';
+include_once 'Classes/Questions.php';
+include_once  'Classes/Answers.php';
+
+?>
+
+
+
+
+
+<?php
+
+if($_SERVER['REQUEST_METHOD']== "POST"){
+    $title = $_POST['title'];
+    $message = $_POST['message'];
+
+    $send = new Answers();
+    $send->addAnswers($_GET['id'], $message);
+
+}
+
+
+?>
+
+
+    <!DOCTYPE html>
+    <html>
+    <head>
+        <title>Add new Question</title>
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+    </head>
+    <body>
+    <?php
+    if (isset($_POST['submitform'])){   header("Location: index.php");   }
+    ?>
+    <div class="container">
+        <div class="jumbotron">
+            <div class="card">
+                <h2 style="text-align: center">Add answer to this question!</h2>
+            </div>
+            <div class="card">
+                <div class="card-body">
+                    <form action="" method="post">
+                        <div class="form-group">
+                            <label for="message">Message</label>
+                            <input type="text" class="form-control" name="message" id="message" placeholder="Message">
+                            <small id="titleHelp" class="form-text text-muted">You can describe your problem here</small>
+                            <value="<?php if($_SERVER['REQUEST_METHOD'] == 'POST') echo $message ?>">
+                        </div>
+                        <button type="submit" name="submitform" class="btn btn-primary">Submit</button>
+                    </form>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+    </body>
+    </html>
+<?php
