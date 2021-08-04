@@ -1,15 +1,15 @@
 # AskMatePHP
-<h1>AskMate in PHP</h1>
-<br>Original project : https://github.com/csabika98/AskMate
+
+<br>Original project : https://github.com/csabika98/AskMate</br>
 
 Funtions:
-You can add any questions, you can delete/edit any questions
-You can answer any questions
+<br>You can add any questions, you can delete/edit any questions
+<br>You can answer any questions
 
 
 Used Technologies:
-PHP
-CSS
-HTML
+<br>PHP
+<br>CSS
+<br>HTML
 
 
