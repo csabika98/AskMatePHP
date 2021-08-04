@@ -12,8 +12,8 @@ class Db {
     public function connect(){
         $this->host = 'localhost';
         $this->username = 'root';
-        $this->password = 'derank123';
-        $this->dbname = 'askmate';
+        $this->password = 'youdbpassword';
+        $this->dbname = 'yourdbname';
         $this->charset = 'utf8mb4';
 
         try{
